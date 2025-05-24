@@ -8,7 +8,7 @@ class Application(tk.Tk):
     def __init__(self):
         super().__init__()
         self.title("文本段落处理工具")
-        self.geometry("900x700")
+        self.geometry("900x770")
         self.configure(bg="#f0f0f0")
 
         # 设置中文字体
