@@ -15,7 +15,7 @@ def split_chapters(file_path, save_directory):
         with open(file_path, 'r', encoding='utf-8') as file:
             content = file.read()
         # 定义第一部分章节的起始和结束标识
-        start_chapter1, end_chapter1 = "第491章 敲门", "陈伶望着那隐藏着炼金术阵的乌云中央，眼眸中精芒闪烁。"
+        start_chapter1, end_chapter1 = "这里是要分割的起始位置", "这里是结束位置"
         # 查找第一部分章节起始标识在文件内容中的位置
         start_index1 = content.find(start_chapter1)
         # 查找第一部分章节结束标识在文件内容中的位置，并加上结束标识的长度
@@ -27,13 +27,13 @@ def split_chapters(file_path, save_directory):
         # 从文件内容中提取第 491 章到第 700 章的内容
         part1_content = content[start_index1:end_index1]
         # 构建第一部分章节内容保存的完整文件路径，将保存目录和文件名组合
-        part1_file_path = os.path.join(save_directory, '我不是戏神491 - 700章.txt')
+        part1_file_path = os.path.join(save_directory, '这是分割后要生成的文件的名字[要自己手动添加.txt]')
         # 以写入模式打开第一部分章节内容保存的文件，并使用 UTF-8 编码写入内容
         with open(part1_file_path, 'w', encoding='utf-8') as part1_file:
             part1_file.write(part1_content)
 
         # 定义第二部分章节的起始和结束标识
-        start_chapter2, end_chapter2 = "第701章", "“白银之王外出，无极君受限……诸位，各凭本事的时候到了。”"
+        start_chapter2, end_chapter2 = 这里是要分割的起始位置", "这里是结束位置"
         # 查找第二部分章节起始标识在文件内容中的位置
         start_index2 = content.find(start_chapter2)
         # 查找第二部分章节结束标识在文件内容中的位置，并加上结束标识的长度
@@ -45,7 +45,7 @@ def split_chapters(file_path, save_directory):
         # 从文件内容中提取第 701 章到第 1000 章的内容
         part2_content = content[start_index2:end_index2]
         # 构建第二部分章节内容保存的完整文件路径，将保存目录和文件名组合
-        part2_file_path = os.path.join(save_directory, '我不是戏神701 - 1000章.txt')
+        part2_file_path = os.path.join(save_directory, '这是分割后要生成的文件的名字[要自己手动添加.txt]')
         # 以写入模式打开第二部分章节内容保存的文件，并使用 UTF-8 编码写入内容
         with open(part2_file_path, 'w', encoding='utf-8') as part2_file:
             part2_file.write(part2_content)
